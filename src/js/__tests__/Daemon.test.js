@@ -5,4 +5,3 @@ test('Daemon ', () => {
   expect(vasya.name).toBe('Vasya');
   expect(vasya.role).toBe('DAEMON');
 });
-

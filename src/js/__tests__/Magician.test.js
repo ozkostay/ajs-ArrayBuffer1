@@ -7,4 +7,3 @@ test('Magician ', () => {
   expect(ivan.role).toBe('MAG');
   expect(ivan.stoned).toBe(1);
 });
-
