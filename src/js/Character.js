@@ -3,9 +3,6 @@ export default class Hero {
     this.name = name;
     this.role = '';
     this.cell = 0;
-    this.health = 100;
-    this.stoned = 0;
-    this.attack = 100;
   }
 
   set stoned(value) {
@@ -14,5 +11,13 @@ export default class Hero {
 
   get stoned() {
     return this._stoned;
+  }
+
+  set attack(value) {
+    this._attack = value;
+  }
+
+  get attack() {
+    return this._attack;
   }
 }

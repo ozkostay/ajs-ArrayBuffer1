@@ -1,4 +1,4 @@
-import Hero from './Hero';
+import Hero from './Character';
 
 export default class Daemon extends Hero {
   constructor(name) {
