@@ -1,27 +1,20 @@
 import Daemon from './Daemon';
 import Magician from './Magician';
 
-const ivan = new Magician('Ivan');
-const vasya = new Daemon('Vasya');
-ivan.stoned = 1; // На Ивана наслали дурман
-ivan.cell = 0;
-vasya.stoned = 0;
-vasya.cell = 2;
-
-function attack(attacker, defender, power) {
-  const countCell = Math.abs(attacker.cell - defender.cell);
-  let damage = power - (countCell - 1) * (power / 10); // Уменьшение силы атаки из-за растояния
-  damage -= attacker.stoned * Math.log2(countCell) * 5; // Уменьшение силы атаки из-за дурмана
-  return damage;
-}
+const mag = new Magician('mag');
+const daemon = new Daemon('daemon');
+mag.stoned = 1; // На Мага наслали дурман
+mag.cell = 0;
+daemon.stoned = 0;
+daemon.cell = 2;
 
 // Состояние до атаки
-console.log('1 ', ivan);
-console.log('1 ', vasya);
+console.log('1 ', mag);
+console.log('1 ', daemon);
 
-// Расчет силы атаки Ивана на Васю с силой атаки 100
-ivan.attack = attack(ivan, vasya, 100);
+// Расчет силы атаки Мага на Демона с силой атаки 100
+//mag.attack = attack(mag, daemon, 100);
 
 // Состояние после атаки
-console.log('2 ', ivan);
-console.log('2 ', vasya);
+console.log('2 ', mag);
+console.log('2 ', daemon);
